@@ -2,17 +2,21 @@
 
 @section('content')
 
+<div class="row">
 @foreach($members as $member)
-<div class="card" style="width: 18rem;">
-    <div class="card-img-top">
-        <h2 style="text-align:center">{{$member->name_first}} {{$member->name_last}}</h2>
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">{{$member->grade->name}}</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="col-sm-3">
+    <div class="card bg-light" style="text-align:center;">
+        <div class="card-img-top">
+            <h2>{{$member->name_first}} {{$member->name_last}}</h2>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{$member->grade->name}}</h5>
+            <p class="card-text">{{$member->type->name}}</p>
+            <a href="/datas/{{$member->id}}" class="btn btn-primary">詳細</a>
+        </div>
     </div>
 </div>
 @endforeach
+</div>
 
 @endsection

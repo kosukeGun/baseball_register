@@ -21,3 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/datas', [App\Http\Controllers\MembersController::class, 'index'])->name('index');
+Route::get('/datas/{member}', [App\Http\Controllers\MembersController::class, 'show'])->name('show');

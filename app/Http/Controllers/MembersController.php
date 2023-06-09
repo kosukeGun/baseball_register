@@ -11,4 +11,9 @@ class MembersController extends Controller
     {
         return view("members/index")->with(['members' => $member->get()]);
     }
+
+    public function show(Member $member)
+    {
+        return view("members/show")->with(['member' => $member]);
+    }
 }
