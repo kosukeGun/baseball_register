@@ -1,11 +1,10 @@
 @extends('../layouts/app')
 
 @section('content')
-<h1 class="d-flex justify-content-center">メンバー追加</h1>
+<h1 class="d-flex justify-content-center">選手データ更新</h1>
 <form action="/datas/{{$member->id}}" method="POST">
     @method('PUT')
     @csrf
-    
     <div class="group-name">
         <div class="row">
             <div class="col-sm-6 d-flex justify-content-center">
