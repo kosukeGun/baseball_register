@@ -3,6 +3,10 @@
 @section('content')
 <h1 class="d-flex justify-content-center">メンバー追加</h1>
 <form action="/datas" method="POST">
+    @csrf
+    <div class="owner-group">
+        <input type="hidden" name="member[owner_id]" value="{{$owner->id}}">
+    </div>
     <div class="group-name">
         <div class="row">
             <div class="col-sm-6 d-flex justify-content-center">

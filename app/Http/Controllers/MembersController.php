@@ -25,8 +25,10 @@ class MembersController extends Controller
         return view("members/create")->with(['owner' => $owner, 'grades' => $grade->get(), 'types' => $type->get()]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Member $member)
     {
-        
+        $input = $request["member"];
+        $member->fill($input)->save();
+        return redirect('/datas/'.$member->id);
     }
 }
