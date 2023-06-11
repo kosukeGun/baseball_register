@@ -11,7 +11,7 @@ class MembersController extends Controller
 {
     public function index(Member $member)
     {
-        return view("members/index")->with(['members' => $member->get()]);
+        return view("members/index")->with(['members' => $member->getByOwner()]);
     }
 
     public function show(Member $member)

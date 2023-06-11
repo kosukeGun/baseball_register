@@ -27,4 +27,10 @@ class Member extends Model
     {
         return $this->belongsTo(Grade::class);
     }
+
+    public function getByOwner()
+    {
+        $owner = \Auth::user();
+        return $this->where("owner_id", $owner->id)->get();
+    }
 }
