@@ -31,4 +31,16 @@ class MembersController extends Controller
         $member->fill($input)->save();
         return redirect('/datas/'.$member->id);
     }
+
+    public function edit(Member $member, Grade $grade, Type $type)
+    {
+        return view('members/edit')->with(['member' => $member, 'grades' => $grade->get(), 'types' => $type->get()]);
+    }
+
+    public function update(Request $request, Member $member)
+    {
+        $input = $request["member"];
+        $member->fill($input)->save();
+        return redirect('/datas/'.$member->id);
+    }
 }
