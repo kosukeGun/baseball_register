@@ -1,7 +1,7 @@
 @extends('../layouts/app')
 
 @section('content')
-
+<h1 class="d-flex justify-content-center">選手一覧</h1>
 <div class="row">
 @foreach($members as $member)
 <div class="col-sm-3">
@@ -17,6 +17,8 @@
     </div>
 </div>
 @endforeach
+
+<a href="/datas/create">メンバー追加</a>
 </div>
 
 @endsection
