@@ -11,6 +11,13 @@
 <div class="edit-button" style="text-align:center;">
     <a type="button" class="btn btn-info" href="/datas/{{$member->id}}/edit">編集</a>
 </div>
+<div class="delete-button" style="text-align:center;">
+    <form action="{{route('destroy', ['member' => $member])}}" method="POST">
+        @method('DELETE')
+        @csrf
+        <button type="submit" class="btn btn-danger">削除</button>
+    </form>
+</div>
 <div class="return-button" style="text-align:center;">
     <a type="button" class="btn btn-dark" href="/datas">戻る</a>
 </div>

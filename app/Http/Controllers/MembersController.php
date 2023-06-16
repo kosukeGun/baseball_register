@@ -43,4 +43,10 @@ class MembersController extends Controller
         $member->fill($input)->save();
         return redirect('/datas/'.$member->id);
     }
+
+    public function destroy(Member $member)
+    {
+        $member->delete();
+        return redirect('/datas');
+    }
 }
