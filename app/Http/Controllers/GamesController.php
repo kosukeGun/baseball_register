@@ -11,4 +11,9 @@ class GamesController extends Controller
     {
         return view("games/index")->with(['games' => $game->getByOwner()]);
     }
+
+    public function show(Game $game)
+    {
+        return view("games/show")->with(['game' => $game]);
+    }
 }

@@ -30,4 +30,5 @@ Route::group(['middleware' => 'auth'], function() {
     Route::put('/datas/{member}', [App\Http\Controllers\MembersController::class, 'update'])->name('datas.update');
     Route::delete('/datas/{member}', [App\Http\Controllers\MembersController::class, 'destroy'])->name('datas.destroy');
     Route::get('/games', [App\Http\Controllers\GamesController::class, 'index'])->name('games.index');
+    Route::get('/games/{game}', [App\Http\Controllers\GamesController::class, 'show'])->name('games.show');
 });
