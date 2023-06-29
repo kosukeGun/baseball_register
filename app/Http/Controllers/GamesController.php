@@ -16,4 +16,10 @@ class GamesController extends Controller
     {
         return view("games/show")->with(['game' => $game]);
     }
+
+    public function create()
+    {
+        $owner = \Auth::user();
+        return view("games/create")->with(["owner" => $owner]);
+    }
 }
