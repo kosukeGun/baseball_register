@@ -29,4 +29,5 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/datas', [App\Http\Controllers\MembersController::class, 'store'])->name('datas.store');
     Route::put('/datas/{member}', [App\Http\Controllers\MembersController::class, 'update'])->name('datas.update');
     Route::delete('/datas/{member}', [App\Http\Controllers\MembersController::class, 'destroy'])->name('datas.destroy');
+    Route::get('/games', [App\Http\Controllers\GamesController::class, 'index'])->name('games.index');
 });

@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <a type="button" class="d-flex justify-content-center top-btn btn btn-primary btn-lg col-sm-6" href="/">戦歴データ</a>
+        <a type="button" class="d-flex justify-content-center top-btn btn btn-primary btn-lg col-sm-6" href="/games">戦歴データ</a>
         <a type="button" class="d-flex justify-content-center top-btn btn btn-danger btn-lg col-sm-6" href="/datas">選手データ</a>
         <a type="button" class="d-flex justify-content-center top-btn btn btn-success btn-lg col-sm-6">試合開始</a>
     </div>

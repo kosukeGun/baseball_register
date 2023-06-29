@@ -13,4 +13,10 @@ class Game extends Model
     {
         return $this->belongsTo(Tournament::class);
     }
+
+    public function getByOwner()
+    {
+        $owner = \Auth::user();
+        return $this->where("owner_id", $owner->id)->get();
+    }
 }
