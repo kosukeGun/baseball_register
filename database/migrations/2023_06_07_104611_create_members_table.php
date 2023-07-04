@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('mail')->nullable();
             $table->foreignId('grade_id')->constrained();
             $table->foreignId('type_id')->constrained();
-            $table->foreignId('owner_id')->constrained('users');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
         });

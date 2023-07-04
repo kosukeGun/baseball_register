@@ -19,7 +19,7 @@ class MemberSeeder extends Seeder
             'mail' => 'y.sato@example.com',
             'grade_id' => '2',
             'type_id' => '3',
-            'owner_id' => '1'
+            'user_id' => '1'
         ]);
         Member::create([
             'name_first' => '鈴木',
@@ -27,7 +27,7 @@ class MemberSeeder extends Seeder
             'mail' => 's.suzuki@example.com',
             'grade_id' => '7',
             'type_id' => '1',
-            'owner_id' => '1'
+            'user_id' => '1'
         ]);
         Member::create([
             'name_first' => '田中',
@@ -35,7 +35,7 @@ class MemberSeeder extends Seeder
             'mail' => 'm.tanaka@example.com',
             'grade_id' => '5',
             'type_id' => '3',
-            'owner_id' => '1'
+            'user_id' => '1'
         ]);
         Member::create([
             'name_first' => '佐々木',
@@ -43,7 +43,7 @@ class MemberSeeder extends Seeder
             'mail' => 'h.sasaki@example.com',
             'grade_id' => '5',
             'type_id' => '2',
-            'owner_id' => '1'
+            'user_id' => '1'
         ]);
         Member::create([
             'name_first' => '井上',
@@ -51,7 +51,7 @@ class MemberSeeder extends Seeder
             'mail' => 'd.inoue@example.com',
             'grade_id' => '5',
             'type_id' => '4',
-            'owner_id' => '1'
+            'user_id' => '1'
         ]);
     }
 }

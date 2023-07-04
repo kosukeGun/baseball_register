@@ -4,8 +4,8 @@
 <h1 class="d-flex justify-content-center">メンバー追加</h1>
 <form action="/datas" method="POST">
     @csrf
-    <div class="owner-group">
-        <input type="hidden" name="member[owner_id]" value="{{$owner->id}}">
+    <div class="user-group">
+        <input type="hidden" name="member[user_id]" value="{{$user->id}}">
     </div>
     <div class="group-name">
         <div class="row">

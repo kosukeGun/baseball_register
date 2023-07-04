@@ -14,7 +14,7 @@ class GameSeeder extends Seeder
     public function run(): void
     {
         Game::create([
-            'owner_id' => '1',
+            'user_id' => '1',
             'tournament_id' => '1',
             'name' => '3回戦',
             'date' => "2022/8/21"

@@ -32,4 +32,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/games', [App\Http\Controllers\GamesController::class, 'index'])->name('games.index');
     Route::get('/games/create', [App\Http\Controllers\GamesController::class, 'create'])->name('games.create');
     Route::get('/games/{game}', [App\Http\Controllers\GamesController::class, 'show'])->name('games.show');
+    Route::post('/games', [App\Http\Controllers\GamesController::class, 'store'])->name('games.store');
+    Route::get('/games/create/{game}', [App\Http\Controllers\GamesController::class, 'start'])->name('games.start');
+    Route::post('/games/create', [App\Http\Controllers\GamesController::class, 'register'])->name('games.register');
 });

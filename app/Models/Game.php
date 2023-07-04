@@ -9,14 +9,21 @@ class Game extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "tournament_id",
+        "user_id",
+        "name",
+        "date",
+    ];
+
     public function tournament()
     {
         return $this->belongsTo(Tournament::class);
     }
 
-    public function getByOwner()
+    public function getByuser()
     {
-        $owner = \Auth::user();
-        return $this->where("owner_id", $owner->id)->get();
+        $user = \Auth::user();
+        return $this->where("user_id", $user->id)->get();
     }
 }

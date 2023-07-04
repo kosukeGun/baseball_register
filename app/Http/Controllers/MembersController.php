@@ -11,7 +11,7 @@ class MembersController extends Controller
 {
     public function index(Member $member)
     {
-        return view("members/index")->with(['members' => $member->getByOwner()]);
+        return view("members/index")->with(['members' => $member->getByuser()]);
     }
 
     public function show(Member $member)
@@ -21,8 +21,8 @@ class MembersController extends Controller
 
     public function create(Grade $grade, Type $type)
     {
-        $owner = \Auth::user();
-        return view("members/create")->with(['owner' => $owner, 'grades' => $grade->get(), 'types' => $type->get()]);
+        $user = \Auth::user();
+        return view("members/create")->with(['user' => $user, 'grades' => $grade->get(), 'types' => $type->get()]);
     }
 
     public function store(Request $request, Member $member)

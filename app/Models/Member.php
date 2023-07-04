@@ -16,7 +16,7 @@ class Member extends Model
         'mail',
         'type_id',
         'grade_id',
-        'owner_id',
+        'user_id',
     ];
 
     public function type()
@@ -29,9 +29,14 @@ class Member extends Model
         return $this->belongsTo(Grade::class);
     }
 
-    public function getByOwner()
+    public function user()
     {
-        $owner = \Auth::user();
-        return $this->where("owner_id", $owner->id)->get();
+        return $this->belongsTo(User::class);
+    }
+
+    public function getByuser()
+    {
+        $user = \Auth::user();
+        return $this->where("user_id", $user->id)->get();
     }
 }
