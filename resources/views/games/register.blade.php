@@ -5,7 +5,7 @@
 <form action="/games/create" method="POST">
     @csrf
     <div class="user-group">
-        <input type="hidden" name="result[user_id]" value="{{$user->id}}">
+        <input type="hidden" name="result[game_id]" value="{{$game->id}}">
     </div>
     <div class="member-group d-flex justify-content-center">
         <div class="row">
@@ -17,13 +17,26 @@
             </select>
         </div>
     </div>
-    <div class="game-group d-flex justify-content-center">
+    <div class="score-group d-flex justify-content-center">
         <div class="row">
-            <label for="game">試合</label>
-            <input type="text" name="game[name]" placeholder="準々決勝第3試合">
+            <label for="tournament">成績</label>
+            <select class="form-control" name="result[score_id]">
+                @foreach($scores as $score)
+                    <option value="{{$score->id}}">{{$score->name}}</option>
+                @endforeach
+            </select>
         </div>
     </div>
-    
+    <div class="rbi-group d-flex justify-content-center">
+        <div class="row">
+            <label for="tournament">打点</label>
+            <select class="form-control" name="result[rbi]">
+                @for($i = 0; $i < 5; $i++)
+                    <option value="{{$i}}">{{$i}}</option>
+                @endfor
+            </select>
+        </div>
+    </div>
     <div class="group-button d-flex justify-content-center">
         <button class="btn btn-success" type="submit">追加</button>
     </div>

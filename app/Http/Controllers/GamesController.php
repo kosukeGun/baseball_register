@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Game;
 use App\Models\Tournament;
 use App\Models\Member;
+use App\Models\Score;
+use App\Models\Result;
 
 class GamesController extends Controller
 {
@@ -33,9 +35,17 @@ class GamesController extends Controller
         return redirect("/games/create/".$game->id);
     }
 
-    public function start(Game $game, Member $member)
+    public function start(Game $game, Member $member, Score $score)
     {
         $user = \Auth::user();
-        return view("games/register")->with(["user" => $user, "game" => $game, "members" => $member->getByuser()]);
+        return view("games/register")->with(["user" => $user, "game" => $game, "members" => $member->getByuser(), "scores" => $score->get()]);
+    }
+
+    public function register(Request $request, Result $result)
+    {
+        $input = $request["result"];
+        $game_id = $input["game_id"];
+        $result->fill($input)->save();
+        return redirect("/games/create/".$game_id);
     }
 }

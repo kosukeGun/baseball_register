@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('results', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->integer("rbl")->default("0");
+            $table->integer("rbi")->default("0");
             $table->foreignId("score_id")->constrained();
             $table->foreignId("member_id")->constrained();
             $table->foreignId("game_id")->constrained();

@@ -9,6 +9,14 @@ class Result extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "name",
+        "rbi",
+        "score_id",
+        "member_id",
+        "game_id",
+    ];
+
     public function score()
     {
         return $this->belongsTo(Score::class);
