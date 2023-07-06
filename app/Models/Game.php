@@ -26,4 +26,9 @@ class Game extends Model
         $user = \Auth::user();
         return $this->where("user_id", $user->id)->get();
     }
+
+    public function results()
+    {
+        return $this->hasMany(Result::class);
+    }
 }
