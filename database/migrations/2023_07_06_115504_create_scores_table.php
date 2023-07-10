@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->foreignId("status_id")->constrained();
+            $table->integer("status");
             $table->timestamps();
         });
     }
