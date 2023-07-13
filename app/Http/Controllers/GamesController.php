@@ -18,7 +18,20 @@ class GamesController extends Controller
 
     public function show(Game $game)
     {
-        return view("games/show")->with(['game' => $game]);
+        $results_old = Result::where("game_id", $game->id)->get();
+        $memberIDs = [];
+        foreach($results_old as $result)
+        {
+            $memberIDs[] = $result->member->id;
+        }
+        $memberIDs = array_unique($memberIDs);
+        $results = [];
+        foreach($memberIDs as $memberID)
+        {
+            $results[] = Result::where("game_id", $game->id)->where("member_id", $memberID)->get();
+        }
+        
+        return view("games/show")->with(['game' => $game, 'results' => $results]);
     }
 
     public function create(Tournament $tournament)
