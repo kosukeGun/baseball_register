@@ -17,6 +17,9 @@
             <th scope="col">#</th>
             <th scope="col">名前</th>
             <th scope="col">打席成績</th>
+            <th scope="col">打数</th>
+            <th scope="col">ヒット数</th>
+            <th scope="col">打率</th>
         </tr>
     </thead>
     <tbody>
@@ -29,6 +32,9 @@
             {{$result_one->score->name}}&nbsp;
             @endforeach
             </td>
+            <td>{{$result[0]->getCount($result[0]->member_id, $result[0]->game_id)}}</td>
+            <td>{{$result[0]->getHitCount($result[0]->member_id, $result[0]->game_id)}}</td>
+            <td>{{$result[0]->getHitAverage($result[0]->member_id, $result[0]->game_id)}}</td>
         </tr>
         @endforeach
     </tbody>

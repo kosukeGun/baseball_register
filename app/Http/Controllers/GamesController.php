@@ -26,12 +26,17 @@ class GamesController extends Controller
         }
         $memberIDs = array_unique($memberIDs);
         $results = [];
+        $counts_hit = [];
         foreach($memberIDs as $memberID)
         {
+            $count_hit = Result::where("game_id", $game->id)->where("member_id", $memberID)->whereHas("score", function($query){
+                $query->where("status", 1);
+            })->get()->count();
             $results[] = Result::where("game_id", $game->id)->where("member_id", $memberID)->get();
         }
         
-        return view("games/show")->with(['game' => $game, 'results' => $results]);
+        
+        return view("games/show")->with(['game' => $game, 'results' => $results, 'counts_hit' => $counts_hit]);
     }
 
     public function create(Tournament $tournament)
