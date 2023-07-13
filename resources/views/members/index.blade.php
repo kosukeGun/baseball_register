@@ -21,5 +21,8 @@
 
 <a href="/datas/create">メンバー追加</a>
 </div>
+<div class="return-button" style="text-align:center;">
+    <a type="button" class="btn btn-dark" href="/home">戻る</a>
+</div>
 
 @endsection

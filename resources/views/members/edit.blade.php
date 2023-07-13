@@ -54,6 +54,9 @@
     <div class="group-button d-flex justify-content-center">
         <button class="btn btn-success" type="submit">更新</button>
     </div>
+    <div class="return-button" style="text-align:center;">
+        <a type="button" class="btn btn-dark" href="/datas/{{$member->id}}">戻る</a>
+    </div>
 </form>
 
 @endsection
