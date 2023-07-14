@@ -40,6 +40,7 @@
     </tbody>
 </table>
 <div class="return-button" style="text-align:center;">
+    <a type="button" class="btn btn-success" href="/games/create/{{$game->id}}">更新</a>
     <a type="button" class="btn btn-dark" href="/games">戻る</a>
 </div>
 
