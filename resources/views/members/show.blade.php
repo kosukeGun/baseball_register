@@ -14,6 +14,14 @@
 <div class="row">
     <div class="col-sm-4">
         <div class="card text-center">
+            <div class="card-header">ヒット数/打数</div>
+            <div class="card-body">
+                <p class="card-text">{{ count($results[0]) }}/{{ count($results[0]) + count($results[1]) + count($results[3]) + count($results[4]) }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card text-center">
             <div class="card-header">打率</div>   
             <div class="card-body">
                 <p class="card-text">
