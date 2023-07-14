@@ -14,42 +14,58 @@ class MemberSeeder extends Seeder
     public function run()
     {
         Member::create([
-            'name_first' => '佐藤',
-            'name_last' => 'ゆうき',
-            'mail' => 'y.sato@example.com',
+            'name_first' => '大谷',
+            'name_last' => 'しょうへい',
+            'mail' => 's.otani@example.com',
             'grade_id' => '2',
             'type_id' => '3',
             'user_id' => '1'
         ]);
         Member::create([
             'name_first' => '鈴木',
-            'name_last' => 'さとし',
+            'name_last' => 'せいや',
             'mail' => 's.suzuki@example.com',
             'grade_id' => '7',
             'type_id' => '1',
             'user_id' => '1'
         ]);
         Member::create([
-            'name_first' => '田中',
-            'name_last' => 'まさる',
-            'mail' => 'm.tanaka@example.com',
+            'name_first' => '村上',
+            'name_last' => 'むねたか',
+            'mail' => 'm.murakami@example.com',
             'grade_id' => '5',
             'type_id' => '3',
             'user_id' => '1'
         ]);
         Member::create([
-            'name_first' => '佐々木',
-            'name_last' => 'はると',
-            'mail' => 'h.sasaki@example.com',
+            'name_first' => '吉田',
+            'name_last' => 'まさたか',
+            'mail' => 'm.yoshida@example.com',
             'grade_id' => '5',
             'type_id' => '2',
             'user_id' => '1'
         ]);
         Member::create([
-            'name_first' => '井上',
-            'name_last' => 'だいち',
-            'mail' => 'd.inoue@example.com',
+            'name_first' => '岡本',
+            'name_last' => 'かずま',
+            'mail' => 'k.okamoto@example.com',
             'grade_id' => '5',
+            'type_id' => '4',
+            'user_id' => '1'
+        ]);
+        Member::create([
+            'name_first' => '山田',
+            'name_last' => 'てつと',
+            'mail' => 't.yamada@example.com',
+            'grade_id' => '2',
+            'type_id' => '3',
+            'user_id' => '1'
+        ]);
+        Member::create([
+            'name_first' => '牧',
+            'name_last' => 'しゅうご',
+            'mail' => 's.maki@example.com',
+            'grade_id' => '3',
             'type_id' => '4',
             'user_id' => '1'
         ]);

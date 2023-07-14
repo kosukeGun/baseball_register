@@ -14,10 +14,13 @@ class TournamentSeeder extends Seeder
     public function run(): void
     {
         Tournament::create([
-            'name' => '第95回選抜高校野球大会'
+            'name' => '春季大会'
         ]);
         Tournament::create([
-            'name' => '第104回全国高校野球選手権大会'
+            'name' => '秋季大会'
+        ]);
+        Tournament::create([
+            'name' => '国体'
         ]);
     }
 }

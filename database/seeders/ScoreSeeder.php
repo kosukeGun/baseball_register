@@ -54,6 +54,36 @@ class ScoreSeeder extends Seeder
         ]);
 
         Score::create([
+            'name' => '投ゴロ',
+            'status' => '2',
+        ]);
+
+        Score::create([
+            'name' => '捕ゴロ',
+            'status' => '2',
+        ]);
+
+        Score::create([
+            'name' => '一ゴロ',
+            'status' => '2',
+        ]);
+
+        Score::create([
+            'name' => '二ゴロ',
+            'status' => '2',
+        ]);
+
+        Score::create([
+            'name' => '三ゴロ',
+            'status' => '2',
+        ]);
+
+        Score::create([
+            'name' => '遊ゴロ',
+            'status' => '2',
+        ]);
+
+        Score::create([
             'name' => '左フライ',
             'status' => '2',
         ]);

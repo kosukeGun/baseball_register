@@ -17,7 +17,19 @@ class GameSeeder extends Seeder
             'user_id' => '1',
             'tournament_id' => '1',
             'name' => '3回戦',
-            'date' => "2022/8/21"
+            'date' => "2022/5/21"
+        ]);
+        Game::create([
+            'user_id' => '1',
+            'tournament_id' => '2',
+            'name' => '2回戦',
+            'date' => "2022/8/29"
+        ]);
+        Game::create([
+            'user_id' => '1',
+            'tournament_id' => '3',
+            'name' => '準々決勝',
+            'date' => "2022/9/11"
         ]);
     }
 }
